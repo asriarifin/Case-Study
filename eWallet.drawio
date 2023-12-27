@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" modified="2023-12-27T09:00:02.881Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="U5Ckwi6K6lbJdX1jzVPL" version="22.1.12" type="device">
+  <diagram name="Halaman-1" id="NUJZT9EolpVpwTUFuOwO">
+    <mxGraphModel dx="1290" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-1" value=" Transactions" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="250" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-2" value="- balance: double&amp;nbsp;&lt;br&gt;&amp;nbsp;- payment: double&amp;nbsp;&lt;br&gt;&amp;nbsp;- transactionDate: Date&amp;nbsp;&lt;br&gt;&amp;nbsp;- remainingAmount: double&amp;nbsp;&lt;br&gt;&amp;nbsp;- topUpMethod: TopUpMethod" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-1">
+          <mxGeometry y="26" width="250" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-1">
+          <mxGeometry y="110" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-4" value="&amp;nbsp;+ Transactions(balance: double, payment: double, topUpMethod: TopUpMethod)&amp;nbsp;&lt;br&gt;&amp;nbsp;+ getBalance(): double&amp;nbsp;&lt;br&gt;&amp;nbsp;+ getPayment(): double&amp;nbsp;&lt;br&gt;&amp;nbsp;+ getRemainingAmount(): double&amp;nbsp;&lt;br&gt;&amp;nbsp;+ getTransactionDate(): Date&amp;nbsp;&lt;br&gt;&amp;nbsp;+ getTopUpMethod(): TopUpMethod&amp;nbsp;&lt;br&gt;&amp;nbsp;+ calculateDiscount(): double&amp;nbsp;&lt;br&gt;&amp;nbsp;+ toString(): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-1">
+          <mxGeometry y="118" width="250" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-5" value="eWallet" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="320" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-6" value="- transactions: ArrayList&amp;lt;Transactions&amp;gt;&amp;nbsp;&lt;br&gt;- totalBalance: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-5">
+          <mxGeometry y="26" width="320" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-5">
+          <mxGeometry y="90" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-8" value="+ eWallet()&amp;nbsp;&lt;br&gt;+ addTransaction(transaction:Transactions): void&amp;nbsp;&lt;br&gt;- updateTotalBalance(remainingAmount: double):void&amp;nbsp;&lt;br&gt;+ getTotalBalance(): double&amp;nbsp;&lt;br&gt;+ calculateTotalDiscount(): double&amp;nbsp;&lt;br&gt;+getMonthlyTransactions():ArrayList&amp;lt;Transactions&amp;gt;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-5">
+          <mxGeometry y="98" width="320" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-9" value=" Main" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="370" width="350" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-10" value="- scanner: Scanner&amp;nbsp;&lt;br&gt;- myWallet: eWallet" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-9">
+          <mxGeometry y="26" width="350" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-9">
+          <mxGeometry y="70" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-12" value="+ main(args: String[]): void&amp;nbsp;&lt;br&gt;&amp;nbsp;- topUpEWallet(scanner: Scanner, wallet: eWallet): void&amp;nbsp;&lt;br&gt;&amp;nbsp;- selectTopUpMethod(scanner: Scanner): TopUpMethod&amp;nbsp;&lt;br&gt;&amp;nbsp;- topUpCreditCard(amount: double, wallet: eWallet): void&amp;nbsp;&lt;br&gt;&amp;nbsp;- topUpDebitCard(amount: double, wallet: eWallet): void&amp;nbsp;&lt;br&gt;&amp;nbsp;- topUpOnlineBanking(amount: double, wallet: eWallet): void&amp;nbsp;&lt;br&gt;&amp;nbsp;- topUpCash(amount: double, wallet: eWallet): void&amp;nbsp;&lt;br&gt;&amp;nbsp;- makePayment(scanner: Scanner, wallet: eWallet): void&amp;nbsp;&lt;br&gt;&amp;nbsp;- displayAndCalculateEverything(wallet: eWallet): void&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-9">
+          <mxGeometry y="78" width="350" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-13" value="TopUpMethod" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-14" value="CREDIT_CARD&amp;nbsp;&lt;br&gt;DEBIT_CARD&amp;nbsp;&lt;br&gt;ONLINE_BANKING&amp;nbsp;&lt;br&gt;CASH" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="myA7_FomLx8W6Lsjo0Se-13">
+          <mxGeometry y="26" width="140" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-20" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="myA7_FomLx8W6Lsjo0Se-13" target="myA7_FomLx8W6Lsjo0Se-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="340" as="sourcePoint" />
+            <mxPoint x="440" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="myA7_FomLx8W6Lsjo0Se-1" target="myA7_FomLx8W6Lsjo0Se-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="340" as="sourcePoint" />
+            <mxPoint x="440" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="myA7_FomLx8W6Lsjo0Se-22" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="myA7_FomLx8W6Lsjo0Se-5" target="myA7_FomLx8W6Lsjo0Se-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="340" as="sourcePoint" />
+            <mxPoint x="440" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
